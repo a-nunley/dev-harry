@@ -1,0 +1,103 @@
+<!--User Story:
+
+As a frequent orderer
+
+I want to load in my favorite (or last) order 
+
+So That I can start from there and modify as needed 
+
+Narrative.
+
+Develop a web-based, mobile-responsive APP using common libraries that is
+
+Described with a readme document (featuring an image of bad interface?) 
+
+Loads data from an existing data object 
+
+Allows for the data to be edited, & 
+
+Re-presents the edited data back to the DOM and
+
+Writes the data to the console in JSON format
+
+The data must have at least 2 dimensions (i.e., one variable with multiple values, a nested list) and use five different input types. 
+
+bonus: use a mobile-specific input! make sure the user knows about it (+5) 
+
+Notes
+
+Think about ordering a sandwich or a meal. Checkboxes for fixings? Cut the sandwich in half? 
+
+What about something at UNA? Having to put in our L# every time...maybe car registration? 
+
+Or getting your Final Exam schedule: click a button to load in your classes and get the times. Modify as needed? (options: in-person, online?)-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+</head>
+<body>
+    <h1>Order Form</h1>
+    <form id="orderForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        <br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+        <br>
+        <label for="order">Order:</label>
+        <select id="order" name="order" required>
+            <option value="pizza">Pizza</option>
+            <option value="burger">Burger</option>
+            <option value="taco">Taco</option>
+        </select>
+        <br>
+        <div id="cutInHalfField">
+            <label for="cutInHalf">Cut in half:</label>
+            <input type="checkbox" id="cutInHalf" name="cutInHalf">
+            <br>
+        </div>
+        <div id="extraCheeseField">
+            <label for="extraCheese">Extra cheese:</label>
+            <input type="checkbox" id="extraCheese" name="extraCheese">
+            <br>
+        </div>
+        <div id="burgerToppingsField" style="display: none;">
+            <label for="burgerToppings">Burger Toppings:</label>
+            <input type="text" id="burgerToppings" name="burgerToppings">
+            <br>
+        </div>
+        <div id="friesAsSide">
+            <label for="extraCheese">Fries as side:</label>
+            <input type="checkbox" id="extraCheese" name="extraCheese">
+            <br>
+        </div>
+        <div id="spicyLevelField" style="display: none;">
+            <label for="spicyLevel">Spicy Level:</label>
+            <select id="spicyLevel" name="spicyLevel">
+                <option value="mild">Mild</option>
+                <option value="medium">Medium</option>
+                <option value="hot">Hot</option>
+            </select>
+            <br>
+        </div>
+        <div id="extraGuacamoleField" style="display: none;">
+            <label for="extraGuacamole">Extra Guacamole:</label>
+            <input type="checkbox" id="extraGuacamole" name="extraGuacamole">
+            <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<footer>
+    <script src="/scripts/script.js"></script>
+</footer>
+</html>
